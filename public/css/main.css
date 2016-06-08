@@ -1,0 +1,16 @@
+#bottom_footer {
+	height:70px;
+	position:absolute;
+	bottom:0;
+	width: 60%;
+}
+
+.bottom_footer a {
+	color: #337ab7;
+	text-decoration: none;
+}
+
+.bottom_footer a:focus, a:hover {
+	color: #23527c;
+	text-decoration: underline;
+}
