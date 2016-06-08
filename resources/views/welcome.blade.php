@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-Hoşgeldiniz!
+
+@unless (Auth::check())
+  @include('includes.slider')
+@endunless
 @endsection

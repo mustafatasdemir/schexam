@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="http://schexam.com">SchExam</a>
+      <a class="navbar-brand" href="{{ url('/') }}">SchExam</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -29,8 +29,9 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Hakkımızda</a></li>
-        <li><a href="#">İletişim</a></li>
+        <li><a href="#">{{ trans('ui.about') }}</a></li>
+        <li><a href="#">{{ trans('ui.contact') }}</a></li>
+        <li><a href="{{ url('/login') }}">{{ trans('ui.login') }}</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

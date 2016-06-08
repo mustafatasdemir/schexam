@@ -12,7 +12,7 @@
       @if (Auth::check())
         @include('includes.navbar_loggedin')
       @else
-        @include('includes.navbar')
+        @include('includes.admin_panel')
       @endif
 
 

@@ -8,9 +8,12 @@
 <!-- Title -->
 <title>Sınav Atama Sistemi</title>
 
-<link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css" />
+
+<link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
+<link rel="stylesheet" href="{{ URL::asset('css/bootstrap_override.css') }}" />
+
 <style type="text/css">
 @font-face {
     font-family: Geometric;

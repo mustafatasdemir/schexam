@@ -37,7 +37,7 @@
             <li><a href="#">Profil</a></li>
             <li><a href="#">Something else here</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Çıkış</a></li>
+            <li><a href="{{ url('/logout') }}">Çıkış</a></li>
           </ul>
         </li>
       </ul>
