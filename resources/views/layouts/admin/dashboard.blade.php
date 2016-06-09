@@ -18,7 +18,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">Schexam</a>
+            <a class="navbar-brand" href="{{ url('/') }}">{{ trans('site.app') }}</a>
         </div>
         <!-- /.navbar-header -->
 
@@ -236,7 +236,7 @@
             <div class="sidebar-nav navbar-collapse">
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        <a href="{{ url('/') }}"><i class="fa fa-dashboard fa-fw"></i> {{ trans('ui.dashboard') }}</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
@@ -430,11 +430,11 @@
         <!-- /.row -->
     </div>
     <!-- /#page-wrapper -->
+    <footer id="bottom_footer">
+        @include('includes.admin.footer')
+    </footer>
 
 </div>
-<footer id="bottom_footer">
-    @include('includes.admin.footer')
-</footer>
 
 
 

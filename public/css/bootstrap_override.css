@@ -1,3 +1,15 @@
 label {
   font-weight: normal;
 }
+
+.container-fluid {
+  padding-left: 200px;
+}
+
+.navbar-brand {
+  font-size: 24px;
+}
+
+.navbar-right {
+  margin-right: 200px;
+}

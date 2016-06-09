@@ -1,8 +1,8 @@
 #bottom_footer {
-	height:70px;
 	position:absolute;
 	bottom:0;
-	width: 60%;
+	width: 100%;
+	display: inline;
 }
 
 .bottom_footer a {
@@ -13,4 +13,9 @@
 .bottom_footer a:focus, a:hover {
 	color: #23527c;
 	text-decoration: underline;
+}
+
+footer p{
+	text-align: center;
+	vertical-align: middle;
 }

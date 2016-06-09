@@ -9,11 +9,7 @@
 </header>
 <div class="container">
 	  <div id="page-wrap">
-      @if (Auth::check())
-        @include('includes.navbar_loggedin')
-      @else
-        @include('includes.admin_panel')
-      @endif
+      @include('includes.navbar')
 
 
     <div>

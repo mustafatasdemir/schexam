@@ -1,15 +1,15 @@
 <!-- Metadata -->
-<meta charset="utf-8">
+@include('includes.meta')
+<!-- Page Specific Metadata -->
+<meta name="keywords" content="">
 <meta name="description" content="">
-<meta name="author" content="ironstone">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Title -->
-<title>Sınav Atama Sistemi</title>
+<title>{{ trans('site.title') }}</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
 <link rel="stylesheet" href="{{ URL::asset('css/bootstrap_override.css') }}" />

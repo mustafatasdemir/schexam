@@ -7,12 +7,12 @@ return [
     | UI Language Lines
     |--------------------------------------------------------------------------
     |
-    | The following language lines are the lines for UI elements
+    | The following language lines are the lines for introduction page
     | and messages.
     |
     */
 
-    'welcome' => 'Hoşgeldiniz!',
+    'title' => 'SchExam!',
     'about' => 'Hakkımızda',
     'login' => 'Giriş Yap',
     'logout' => 'Çıkış',
