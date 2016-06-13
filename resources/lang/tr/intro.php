@@ -13,10 +13,9 @@ return [
     */
 
     'title' => 'SchExam!',
-    'about' => 'Hakkımızda',
-    'login' => 'Giriş Yap',
-    'logout' => 'Çıkış',
-    'contact' => "İletişim",
-    'dashboard' => "Kontrol Paneli",
+    'home' => 'ANASAYFA',
+    'features' => 'ÖZELLİKLER',
+    'login' => 'GİRİŞ YAP',
+    'contact' => "İLETİŞİM",
 
 ];

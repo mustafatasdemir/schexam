@@ -27,11 +27,12 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right text-uppercase">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#feature">Features</a></li>
+          <li><a href="#home">{{ trans('intro.home') }}</a></li>
+          <li><a href="#feature">{{ trans('intro.features') }}</a></li>
           <li><a href="#pricing">Pricing</a></li>
           <li><a href="#download">Download</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact">{{ trans('intro.contact') }}</a></li>
+          <li><a onclick="window.location.href='{{ url('/login') }}'" href="{{ url('/login') }}">{{ trans('intro.login') }}</a></li>
         </ul>
       </div>
     </div>
