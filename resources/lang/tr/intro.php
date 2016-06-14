@@ -11,6 +11,7 @@ return [
     | and messages.
     |
     */
+    'html.title' => 'SchExam!',
 
     'navbar.title' => 'SchExam!',
     'navbar.home' => 'ANASAYFA',

@@ -19,10 +19,15 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/admin', function () {
-    return view('admin_panel');
-});
-
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()
+{
+    Route::get('/admin', function()
+    {
+        return view('admin_panel');
+    });
+
+});

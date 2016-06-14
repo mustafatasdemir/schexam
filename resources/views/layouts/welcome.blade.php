@@ -10,6 +10,11 @@
     <div id="page-wrap">
       @include('includes.navbar')
 
+
+      @foreach ( $students as $student)
+        {{$student->stateID}}
+      @endforeach
+
       @include('includes.slider')
 
       <div>

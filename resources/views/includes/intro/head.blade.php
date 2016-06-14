@@ -5,7 +5,7 @@
 <meta name="description" content="">
 
 <!-- Title -->
-<title>{{ trans('intro.title') }}</title>
+<title>{{ trans('intro.html.title') }}</title>
 
 <!-- Stylesheets -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet">
