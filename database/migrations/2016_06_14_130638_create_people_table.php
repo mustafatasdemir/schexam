@@ -18,9 +18,9 @@ class CreatePeopleTable extends Migration
             $table->string('surname', 20);
             $table->string('phone', 12);
             $table->string('email', 100)->unique();
-            $table->boolean('is_active');
-            $table->boolean('is_proctor');
             $table->integer('max_allowed_task');
+            $table->boolean('is_proctor');
+            $table->boolean('is_active')->default(true);
             $table->integer('title_id')->unsigned();
             $table->integer('department_id')->unsigned();
             $table->timestamps();

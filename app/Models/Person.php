@@ -12,8 +12,8 @@ class Person extends Model
   * @var array
   */
   protected $fillable = [
-    'name', 'surname', 'phone', 'email', 'is_active', 'is_proctor',
-    'max_allowed_task', 'title_id', 'department_id'
+    'name', 'surname', 'phone', 'email', 'max_allowed_task',
+    'is_proctor', 'is_active', 'title_id', 'department_id'
   ];
 
   /**
@@ -31,5 +31,13 @@ class Person extends Model
   public function title()
   {
     return $this->belongsTo('App\Models\Title');
+  }
+
+  /**
+  * Get the courses of the teacher.
+  */
+  public function courses()
+  {
+    return $this->hasMany('App\Models\Course');
   }
 }

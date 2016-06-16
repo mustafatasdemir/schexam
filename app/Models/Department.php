@@ -31,4 +31,12 @@ class Department extends Model
   {
     return $this->hasMany('App\Models\Person');
   }
+
+  /**
+  * Get the courses of the department.
+  */
+  public function courses()
+  {
+    return $this->hasMany('App\Models\Course');
+  }
 }
