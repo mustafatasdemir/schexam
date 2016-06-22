@@ -34,4 +34,13 @@ class Course extends Model
   {
     return $this->belongsTo('App\Models\Department');
   }
+
+
+  /**
+  * Get the exams defined for this course over the years.
+  */
+  public function exams()
+  {
+    return $this->hasMany('App\Models\CourseExam');
+  }
 }

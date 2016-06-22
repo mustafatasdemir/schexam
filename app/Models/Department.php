@@ -12,7 +12,7 @@ class Department extends Model
   * @var array
   */
   protected $fillable = [
-    'code', 'name'
+    'code', 'name', 'faculty_id'
   ];
 
 
@@ -38,5 +38,13 @@ class Department extends Model
   public function courses()
   {
     return $this->hasMany('App\Models\Course');
+  }
+
+  /**
+  * Get the faculty that this department is under.
+  */
+  public function faculty()
+  {
+    return $this->belongsTo('App\Models\Faculty');
   }
 }

@@ -14,12 +14,20 @@ class Student extends Model
   protected $fillable = [
     'name', 'surname', 'stateID', 'schoolID', 'department_id'
   ];
-  
+
   /**
   * Get the department of the student.
   */
   public function department()
   {
     return $this->belongsTo('App\Models\Department');
+  }
+
+  /**
+  * Get the exams that this student will take.
+  */
+  public function students()
+  {
+    return $this->belongsToMany('App\Models\CourseExam');
   }
 }
