@@ -40,4 +40,12 @@ class Person extends Model
   {
     return $this->hasMany('App\Models\Course');
   }
+
+  /**
+  * Get the availabilities of the teacher.
+  */
+  public function availabilities()
+  {
+    return $this->hasMany('App\Models\ProctorAvailability');
+  }
 }

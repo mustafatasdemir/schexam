@@ -63,4 +63,12 @@ class ExamSession extends Model
   {
     return $this->belongsTo('App\Models\DefinedSessionTime');
   }
+
+  /**
+  * Get the availabilities for this session.
+  */
+  public function availabilities()
+  {
+    return $this->hasMany('App\Models\ProctorAvailability');
+  }
 }
