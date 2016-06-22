@@ -26,7 +26,7 @@ class Student extends Model
   /**
   * Get the exams that this student will take.
   */
-  public function students()
+  public function exams()
   {
     return $this->belongsToMany('App\Models\CourseExam');
   }
