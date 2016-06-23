@@ -12,7 +12,7 @@ class CourseExam extends Model
   * @var array
   */
   protected $fillable = [
-    'course_id', 'exam_term_id', 'exam_type_id'
+    'duration', 'course_id', 'exam_term_id', 'exam_type_id'
   ];
 
   /**

@@ -14,4 +14,11 @@ class ClassYear extends Model
   protected $fillable = [
     'code', 'name', 'is_active'
   ];
+    /**
+    * Get the students who are enrolled for this year.
+    */
+    public function students()
+    {
+      return $this->hasMany('App\Models\Student');
+    }
 }

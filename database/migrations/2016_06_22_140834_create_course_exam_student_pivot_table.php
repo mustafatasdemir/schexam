@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCourse_examStudentPivotTable extends Migration
+class CreateCourseExamStudentPivotTable extends Migration
 {
     /**
      * Run the migrations.

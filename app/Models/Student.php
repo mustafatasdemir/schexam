@@ -12,7 +12,8 @@ class Student extends Model
   * @var array
   */
   protected $fillable = [
-    'name', 'surname', 'stateID', 'schoolID', 'department_id'
+    'name', 'surname', 'stateID', 'schoolID', 'department_id',
+    'class_year_id', 'class_term_id'
   ];
 
   /**
@@ -29,5 +30,21 @@ class Student extends Model
   public function exams()
   {
     return $this->belongsToMany('App\Models\CourseExam');
+  }
+
+  /**
+  * Get the class year of the student.
+  */
+  public function class_year()
+  {
+    return $this->belongsTo('App\Models\ClassYear');
+  }
+
+  /**
+  * Get the class term of the student.
+  */
+  public function class_term()
+  {
+    return $this->belongsTo('App\Models\ClassTerm');
   }
 }

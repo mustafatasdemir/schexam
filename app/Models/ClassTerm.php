@@ -14,4 +14,11 @@ class ClassTerm extends Model
   protected $fillable = [
     'code', 'name', 'is_active'
   ];
+    /**
+    * Get the students who are enrolled for this term.
+    */
+    public function students()
+    {
+      return $this->hasMany('App\Models\Student');
+    }
 }
