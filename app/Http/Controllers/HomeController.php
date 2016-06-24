@@ -36,8 +36,8 @@ class HomeController extends Controller
       //$department = Department::where('id', 1)->first();
       //Debugbar::info($department->students);
       //Debugbar::info($student->department->name);
-      $course_exam = CourseExam
+      //$course_exam = CourseExam
 
-        return view('welcome', ['students' =>  $department->students]);
+        //return view('welcome', ['students' =>  $department->students]);
     }
 }

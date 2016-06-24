@@ -149,6 +149,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         Barryvdh\Debugbar\ServiceProvider::class,
+        'Collective\Html\HtmlServiceProvider',
 
         /*
          * Application Service Providers...
@@ -205,6 +206,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'DebugBar' => Barryvdh\Debugbar\Facade::class,
+        'Form' => 'Collective\Html\FormFacade',
+        'Html' => 'Collective\Html\HtmlFacade',
 
     ],
 

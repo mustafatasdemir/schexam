@@ -11,6 +11,13 @@
 |
 */
 
+// Restful routes
+
+Route::resource('examterm', 'ModelControllers\ExamTermController');
+
+//
+
+
 Route::get('/', function () {
     return view('intro');
 });
