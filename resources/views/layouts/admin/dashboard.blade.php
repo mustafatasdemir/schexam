@@ -236,16 +236,16 @@
             <div class="sidebar-nav navbar-collapse">
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="{{ url('/') }}"><i class="fa fa-dashboard fa-fw"></i> {{ trans('ui.dashboard') }}</a>
+                        <a href="{{ url('/admin') }}"><i class="fa fa-dashboard fa-fw"></i> {{ trans('ui.dashboard') }}</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                        <a href="{{ url('/examterm') }}"><i class="fa fa-bar-chart-o fa-fw"></i> {{ trans('ui.exam_term') }}<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="flot.html">Flot Charts</a>
+                                <a href="{{ url('/examterm') }}"> {{ trans('ui.exam_term_list') }}</a>
                             </li>
                             <li>
-                                <a href="morris.html">Morris.js Charts</a>
+                                <a href="{{ url('/examterm/create') }}"> {{ trans('ui.exam_term_create') }}</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->

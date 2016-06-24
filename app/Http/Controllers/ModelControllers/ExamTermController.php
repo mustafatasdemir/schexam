@@ -45,15 +45,14 @@ class ExamTermController extends Controller
   public function store(Request $request)
   {
     $exam_term = new ExamTerm;
-    $exam_term->code = $request->input('exam_term_code');
-    $exam_term->name = $request->input('exam_term_name');
-    $exam_term->description = $request->input('exam_term_description');
-    $exam_term->start_date = Carbon::createFromFormat('d/m/Y', $request->input('exam_term_start_date'));
-    $exam_term->end_date = Carbon::createFromFormat('d/m/Y', $request->input('exam_term_end_date'));
+    $exam_term->code = $request->input('code');
+    $exam_term->name = $request->input('name');
+    $exam_term->description = $request->input('description');
+    $exam_term->start_date = Carbon::createFromFormat('Y-m-d', $request->input('start_date'));
+    $exam_term->end_date = Carbon::createFromFormat('Y-m-d', $request->input('end_date'));
 
     if($exam_term->save()){
-      $exam_terms = ExamTerm::all();
-      return view('models.examterms.index', ['exam_terms' =>  $exam_terms]);
+      return redirect()->route('examterm.index');
     }
   }
 
@@ -77,7 +76,6 @@ class ExamTermController extends Controller
   public function edit($id)
   {
     $exam_term = ExamTerm::findOrFail($id);
-    Debugbar::info($exam_term);
 
     return view('models.examterms.edit', ['exam_term' =>  $exam_term]);
   }
@@ -93,15 +91,14 @@ class ExamTermController extends Controller
   {
     $exam_term = ExamTerm::findOrFail($id);
 
-    $exam_term->code = $request->input('exam_term_code');
-    $exam_term->name = $request->input('exam_term_name');
-    $exam_term->description = $request->input('exam_term_description');
-    $exam_term->start_date = Carbon::createFromFormat('d/m/Y', $request->input('exam_term_start_date'));
-    $exam_term->end_date = Carbon::createFromFormat('d/m/Y', $request->input('exam_term_end_date'));
+    $exam_term->code = $request->input('code');
+    $exam_term->name = $request->input('name');
+    $exam_term->description = $request->input('description');
+    $exam_term->start_date = Carbon::createFromFormat('Y-m-d', $request->input('start_date'));
+    $exam_term->end_date = Carbon::createFromFormat('Y-m-d', $request->input('end_date'));
 
     if($exam_term->save()){
-      $exam_terms = ExamTerm::all();
-      return view('models.examterms.index', ['exam_terms' =>  $exam_terms]);
+      return redirect()->route('examterm.index');
     }
   }
 
@@ -113,6 +110,10 @@ class ExamTermController extends Controller
   */
   public function destroy($id)
   {
-    //
+    $exam_term = ExamTerm::findOrFail($id);
+    if($exam_term->delete()){
+      $exam_terms = ExamTerm::all();
+      return view('models.examterms.index', ['exam_terms' =>  $exam_terms]);
+    }
   }
 }

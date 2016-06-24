@@ -16,7 +16,7 @@ class CreateExamTermsTable extends Migration
             $table->increments('id');
             $table->string('code', 20);
             $table->string('name', 100);
-            $table->string('description', 100);
+            $table->string('description', 100)->nullable();
             $table->date('start_date');
             $table->date('end_date');
             $table->timestamps();

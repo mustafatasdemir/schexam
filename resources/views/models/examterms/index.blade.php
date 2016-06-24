@@ -2,10 +2,12 @@
 
 @section('content')
 
+<h1 class="page-header custom-header">List Exam Terms</h1>
+
 <li><a href="{{ route('examterm.edit', 5) }}">Profile</a></li>
 
-@foreach ( $exam_terms as $exam_term)
-{{$exam_term->name}}
-@endforeach
+@include('models.examterms.includes.table')
 
+
+@include('models.examterms.includes.script')
 @endsection

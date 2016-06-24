@@ -15,5 +15,8 @@ return [
 
     'save' => 'Kaydet',
     'update' => 'Güncelle',
+    'edit' => 'Düzenle',
+    'delete' => 'Sil',
+
 
 ];

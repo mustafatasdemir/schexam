@@ -11,9 +11,6 @@
 |
 */
 
-// Restful routes
-
-Route::resource('examterm', 'ModelControllers\ExamTermController');
 
 //
 
@@ -36,5 +33,9 @@ Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()
     {
         return view('admin_panel');
     });
+
+    // Restful routes
+
+    Route::resource('examterm', 'ModelControllers\ExamTermController');
 
 });

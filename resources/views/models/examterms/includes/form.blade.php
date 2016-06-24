@@ -6,14 +6,22 @@
     <div class="four wide column"></div>
     <div class="eight wide column">
       <label>Code</label>
-      <input id="exam_term_code" type="text" name="exam_term_code" placeholder="Code" required="">
+      @if(!empty($exam_term->id))
+      <input id="code" type="text" name="code" placeholder="Code" required="" value="{{$exam_term->code}}">
+      @else
+      <input id="code" type="text" name="code" placeholder="Code" required="">
+      @endif
     </div>
     <div class="four wide column"></div>
 
     <div class="four wide column"></div>
     <div class="eight wide column">
       <label>Name</label>
-      <input id="exam_term_name" type="text" name="exam_term_name" placeholder="Name" required="">
+      @if(!empty($exam_term->id))
+      <input id="name" type="text" name="name" placeholder="Name" required="" value="{{$exam_term->name}}">
+      @else
+      <input id="name" type="text" name="name" placeholder="Name" required="">
+      @endif
     </div>
     <div class="four wide column"></div>
 
@@ -22,7 +30,11 @@
     <div class="four wide column">
       <label>Start Date</label>
       <div class='input-group date' id='s_date'>
-        <input id="exam_term_start_date" type='text' name="exam_term_start_date" placeholder="Start Date" required="">
+        @if(!empty($exam_term->id))
+        <input id="start_date" type='text' name="start_date" placeholder="Start Date" required="" value="{{$exam_term->start_date}}">
+        @else
+        <input id="start_date" type='text' name="start_date" placeholder="Start Date" required="">
+        @endif
         <span class="input-group-addon">
           <span class="glyphicon glyphicon-calendar"></span>
         </span>
@@ -31,7 +43,11 @@
     <div class="four wide column">
       <label>End Date</label>
       <div class='input-group date' id='e_date'>
-        <input id="exam_term_end_date" type='text' name="exam_term_end_date" placeholder="End Date" required="">
+        @if(!empty($exam_term->id))
+        <input id="end_date" type='text' name="end_date" placeholder="End Date" required="" value="{{$exam_term->end_date}}">
+        @else
+        <input id="end_date" type='text' name="end_date" placeholder="End Date" required="">
+        @endif
         <span class="input-group-addon">
           <span class="glyphicon glyphicon-calendar"></span>
         </span>
@@ -44,7 +60,11 @@
     <div class="four wide column"></div>
     <div class="eight wide column">
       <label>Description</label>
-      <textarea id="exam_term_description" name="exam_term_description" rows="2"></textarea>
+      @if(!empty($exam_term->id))
+      <textarea id="description" name="description" rows="2">{{$exam_term->description}}</textarea>
+      @else
+      <textarea id="description" name="description" rows="2"></textarea>
+      @endif
     </div>
     <div class="four wide column"></div>
 
@@ -52,10 +72,10 @@
     <div class="four wide column">
       <div class="save-button">
         <button class="fluid huge ui primary button">
-          @if (strpos(Route::current()->getName(), 'create') !== false)
-            {{ trans('forms.save') }}
+          @if(empty($exam_term->id))
+          {{ trans('forms.save') }}
           @else
-            {{ trans('forms.update') }}
+          {{ trans('forms.update') }}
           @endif
         </button>
       </div>

@@ -6,11 +6,9 @@
 
 <h1 class="page-header custom-header">Edit Existing Exam Term</h1>
 
-{{ Form::open(array('route' => ['examterm.update', $exam_term], 'autocomplete' => 'off')) }}
+{{ Form::model($exam_term, array('route' => ['examterm.update', $exam_term], 'autocomplete' => 'off', 'method' => 'put')) }}
   @include('models.examterms.includes.form')
 {{ Form::close() }}
-
-{{$exam_term->name}}
 
 
 @include('models.examterms.includes.script')

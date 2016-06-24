@@ -19,4 +19,10 @@ return [
     'contact' => "İletişim",
     'dashboard' => "Kontrol Paneli",
 
+
+    // Admin Dashboard Side Panel
+    'exam_term' => "Sınav Takvimi",
+    'exam_term_create' => "Yeni Takvim Oluştur",
+    'exam_term_list' => "Takvimleri Listele",
+
 ];

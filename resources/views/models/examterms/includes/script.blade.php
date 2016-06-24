@@ -1,33 +1,32 @@
 <script type="text/javascript">
 $(function () {
   $('#s_date').datetimepicker({
-    format: 'DD/MM/YYYY'
+    format: 'YYYY-MM-DD',
   })
   .on('dp.change', function(e) {
     //$('#examTermForm').formValidation('revalidateField', 'startDate');
+    console.log('Deneme')
   });
   $('#e_date').datetimepicker({
-    format: 'DD/MM/YYYY'
+    format: 'YYYY-MM-DD',
   })
   .on('dp.change', function(e) {
     //$('#examTermForm').formValidation('revalidateField', 'endDate');
   });
 
-
+$('#example').DataTable({"columnDefs": [
+        {"className": "dt-center", "targets": "_all"}
+      ]});
 
 });
 
 </script>
-
-@if (strpos(Route::current()->getName(), 'edit') !== false)
+@if(!empty($exam_term->id))
 <script type="text/javascript">
-$(function () {
-  document.getElementById("exam_term_code").value="{{ $exam_term->code }}";
-  document.getElementById("exam_term_name").value="{{ $exam_term->name }}";
-  document.getElementById("exam_term_start_date").value="{{ $exam_term->start_date }}";
-  document.getElementById("exam_term_end_date").value="{{ $exam_term->end_date }}";
-  document.getElementById("exam_term_description").value="{{ $exam_term->description }}";
-});
+	$(function () {
+	  document.getElementById("start_date").value="{{ $exam_term->start_date }}";
+	  document.getElementById("end_date").value="{{ $exam_term->end_date }}";
+	});
 
 </script>
 @endif
