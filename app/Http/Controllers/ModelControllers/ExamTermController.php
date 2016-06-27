@@ -7,8 +7,6 @@ use App\Http\Requests;
 
 use App\Http\Controllers\Controller;
 
-use DebugBar;
-
 use Carbon\Carbon;
 use App\Models\ExamTerm;
 
@@ -112,8 +110,7 @@ class ExamTermController extends Controller
   {
     $exam_term = ExamTerm::findOrFail($id);
     if($exam_term->delete()){
-      $exam_terms = ExamTerm::all();
-      return view('models.examterms.index', ['exam_terms' =>  $exam_terms]);
+      return redirect()->route('examterm.index');
     }
   }
 }

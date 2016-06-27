@@ -15,7 +15,7 @@ class CreateCoursesTable extends Migration
         Schema::create('courses', function (Blueprint $table) {
             $table->increments('id');
             $table->string('code', 20);
-            $table->string('name', 20);
+            $table->string('name', 100);
             $table->string('description', 100);
             $table->boolean('is_remote')->default(false);
             $table->boolean('is_active')->default(true);

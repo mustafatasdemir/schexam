@@ -14,5 +14,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
 
 
+<script src="{{ URL::asset('js/admin/sweetalert.min.js') }}"></script>
 <script src="{{ URL::asset('js/admin/jquery.dataTables.min.js') }}"></script>
 <script src="{{ URL::asset('js/admin/panel.js') }}"></script>

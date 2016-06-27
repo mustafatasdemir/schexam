@@ -21,6 +21,8 @@ class CreateStudentsTable extends Migration
             $table->integer('department_id');
             $table->integer('class_year_id');
             $table->integer('class_term_id');
+            $table->boolean('is_active')->default(true);
+            $table->boolean('is_graduated')->default(false);
             $table->timestamps();
         });
     }

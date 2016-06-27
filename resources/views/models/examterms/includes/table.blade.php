@@ -29,15 +29,15 @@
       <td>{{$exam_term->end_date}}</td>
       <td>
 
-          {{ Form::model($exam_term, array('route' => ['examterm.destroy', $exam_term], 'method' => 'delete')) }}
-          <p>
-            <a class="btn navbar-btn btn-warning" href="{{ route('examterm.edit', $exam_term->id) }}">{{ trans('forms.edit') }}</a>
-          {{ Form::submit(trans('forms.delete'), array('class' => 'btn navbar-btn btn-danger')) }}
-          </p>
-          {{ Form::close() }}
-        </td>
+        <a class="btn navbar-btn btn-warning" href="{{ route('examterm.edit', $exam_term->id) }}">{{ trans('forms.edit') }}</a>
+        {{ Form::model($exam_term, array('route' => ['examterm.destroy', $exam_term], 'method' => 'delete', 'class' => 'delete_exam_form')) }}
+        <p>
+          {{ Form::submit(trans('forms.delete'), array('class' => 'btn navbar-btn btn-danger delete_exam', 'id' => 'delete_exam_button')) }}
+        </p>
+        {{ Form::close() }}
+      </td>
 
-      </tr>
-      @endforeach
-    </tbody>
-  </table>
+    </tr>
+    @endforeach
+  </tbody>
+</table>

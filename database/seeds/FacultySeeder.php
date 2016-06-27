@@ -13,7 +13,7 @@ class FacultySeeder extends Seeder
   */
   public function run()
   {
-    Faculty::create(['code' => 'EGT',
+    Faculty::create(['code' => 'EGTFAK',
     'name' => 'Eğitim Fakültesi']);
   }
 }

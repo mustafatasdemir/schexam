@@ -11,8 +11,8 @@
       @include('includes.navbar')
 
 
-      @foreach ( $students as $student)
-        {{$student->stateID}}
+      @foreach ( $exams as $exam)
+        {{$exam->course->name}}
       @endforeach
 
       @include('includes.slider')

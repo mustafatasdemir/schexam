@@ -17,3 +17,7 @@ body {
 .save-button {
   text-align: center;
 }
+
+.ui.dimmer {
+  position: fixed!important;
+}

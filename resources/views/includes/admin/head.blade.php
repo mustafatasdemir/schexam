@@ -16,6 +16,7 @@
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css">
 
+<link href="{{ URL::asset('css/admin/sweetalert.css') }}" rel="stylesheet">
 <link href="{{ URL::asset('css/admin/panel.css') }}" rel="stylesheet">
 <link href="{{ URL::asset('css/admin/main.css') }}" rel="stylesheet">
 <link href="{{ URL::asset('css/bootstrap_override.css') }}" rel="stylesheet">

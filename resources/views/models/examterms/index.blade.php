@@ -7,7 +7,12 @@
 <li><a href="{{ route('examterm.edit', 5) }}">Profile</a></li>
 
 @include('models.examterms.includes.table')
-
-
+<button class="show">Open</button>
 @include('models.examterms.includes.script')
+
+<script type="text/javascript">
+
+
+
+</script>
 @endsection
