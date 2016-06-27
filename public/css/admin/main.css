@@ -15,3 +15,13 @@
   color: #23527c;
   text-decoration: underline;
 }
+
+.edit-delete-buttons form,
+.edit-delete-buttons form div {
+  display: inline;
+}
+
+.edit-delete-buttons input {
+  display: inline;
+  vertical-align: middle;
+}

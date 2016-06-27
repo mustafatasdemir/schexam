@@ -28,13 +28,17 @@
       <td>{{$exam_term->start_date}}</td>
       <td>{{$exam_term->end_date}}</td>
       <td>
+        <div class="edit-delete-buttons">
+          {{ Form::model($exam_term, array('route' => ['examterm.edit', $exam_term->id], 'method' => 'get', 'class' => 'edit_exam_form')) }}
+            {{ Form::submit(trans('forms.edit'), array('class' => 'btn navbar-btn btn-warning')) }}
+          {{ Form::close() }}
 
-        <a class="btn navbar-btn btn-warning" href="{{ route('examterm.edit', $exam_term->id) }}">{{ trans('forms.edit') }}</a>
-        {{ Form::model($exam_term, array('route' => ['examterm.destroy', $exam_term], 'method' => 'delete', 'class' => 'delete_exam_form')) }}
-        <p>
-          {{ Form::submit(trans('forms.delete'), array('class' => 'btn navbar-btn btn-danger delete_exam', 'id' => 'delete_exam_button')) }}
-        </p>
-        {{ Form::close() }}
+          {{ Form::model($exam_term, array('route' => ['examterm.destroy', $exam_term], 'method' => 'delete', 'class' => 'delete_exam_form')) }}
+            {{ Form::submit(trans('forms.delete'), array('class' => 'btn navbar-btn btn-danger')) }}
+          {{ Form::close() }}
+      </div>
+
+
       </td>
 
     </tr>

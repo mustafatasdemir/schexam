@@ -16,11 +16,19 @@
 
 
 Route::get('/', function () {
+  // return to dashboard if the user is admin
+  if (Auth::check() &&
+  (Auth::user()->type == "A" || Auth::user()->type == "S")){
+    return view('admin_panel');
+  }
+  else{
+    // intro view otherwise
     return view('intro');
+  }
 });
 
 Route::get('/welcome', function () {
-    return view('welcome');
+  return view('welcome');
 });
 
 Route::auth();
@@ -29,13 +37,13 @@ Route::get('/home', 'HomeController@index');
 
 Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()
 {
-    Route::get('/admin', function()
-    {
-        return view('admin_panel');
-    });
+  Route::get('/admin', function()
+  {
+    return view('admin_panel');
+  });
 
-    // Restful routes
+  // Restful routes
 
-    Route::resource('examterm', 'ModelControllers\ExamTermController');
+  Route::resource('examterm', 'ModelControllers\ExamTermController');
 
 });
