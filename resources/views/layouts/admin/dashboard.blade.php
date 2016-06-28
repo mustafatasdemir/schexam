@@ -331,6 +331,8 @@
 
     <div id="page-wrapper">
 
+        <div class="before_content_title"></div>
+
         <div>
 
                 @yield('content')
