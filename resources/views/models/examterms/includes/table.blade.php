@@ -33,7 +33,7 @@
             {{ Form::submit(trans('forms.edit'), array('class' => 'btn navbar-btn btn-warning')) }}
           {{ Form::close() }}
 
-          {{ Form::model($exam_term, array('route' => ['examterms.destroy', $exam_term], 'method' => 'delete', 'class' => 'delete_exam_form')) }}
+          {{ Form::model($exam_term, array('route' => ['examterms.destroy', $exam_term->id], 'method' => 'delete', 'class' => 'delete_exam_form')) }}
             {{ Form::submit(trans('forms.delete'), array('class' => 'btn navbar-btn btn-danger')) }}
           {{ Form::close() }}
       </div>
