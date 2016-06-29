@@ -25,4 +25,8 @@ return [
     'exam_term_create' => "Yeni Takvim Oluştur",
     'exam_term_list' => "Takvimleri Listele",
 
+    'student' => "Öğrenci",
+    'student_create' => "Yeni Öğrenci Oluştur",
+    'student_list' => "Öğrencileri Listele",
+
 ];

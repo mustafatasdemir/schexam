@@ -239,13 +239,25 @@
                         <a href="{{ url('/admin') }}"><i class="fa fa-dashboard fa-fw"></i> {{ trans('ui.dashboard') }}</a>
                     </li>
                     <li>
-                        <a href="{{ url('/examterm') }}"><i class="fa fa-bar-chart-o fa-fw"></i> {{ trans('ui.exam_term') }}<span class="fa arrow"></span></a>
+                        <a href="{{ url('/examterms') }}"><i class="fa fa-bar-chart-o fa-fw"></i> {{ trans('ui.exam_term') }}<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="{{ url('/examterm') }}"> {{ trans('ui.exam_term_list') }}</a>
+                                <a href="{{ url('/examterms') }}"> {{ trans('ui.exam_term_list') }}</a>
                             </li>
                             <li>
-                                <a href="{{ url('/examterm/create') }}"> {{ trans('ui.exam_term_create') }}</a>
+                                <a href="{{ url('/examterms/create') }}"> {{ trans('ui.exam_term_create') }}</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="{{ url('/students') }}"><i class="fa fa-bar-chart-o fa-fw"></i> {{ trans('ui.student') }}<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="{{ url('/students') }}"> {{ trans('ui.student_list') }}</a>
+                            </li>
+                            <li>
+                                <a href="{{ url('/students/create') }}"> {{ trans('ui.student_create') }}</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
@@ -331,13 +343,15 @@
 
     <div id="page-wrapper">
 
-        <div class="before_content_title"></div>
+        <div class="before_content"></div>
 
         <div>
 
                 @yield('content')
 
         </div>
+
+        <div class="after_content"></div>
     </div>
     <!-- /#page-wrapper -->
     <footer id="bottom_footer">

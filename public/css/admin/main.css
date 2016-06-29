@@ -1,6 +1,5 @@
 #bottom_footer {
   height:70px;
-  position:absolute;
   bottom:0;
   width: 100%;
   text-align: center;
@@ -26,6 +25,22 @@
   vertical-align: middle;
 }
 
-.before_content_title {
+.before_content {
   height: 50px;
+}
+
+.after_content {
+  height: 250px;
+}
+
+.dataTables_filter input {
+  text-transform: uppercase;
+}
+
+.loading-gif {
+
+  display:block;
+  margin: 0 auto;
+  left: 50%;
+  top: 10%;
 }

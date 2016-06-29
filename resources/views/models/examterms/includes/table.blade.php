@@ -1,4 +1,4 @@
-<table id="example" class="display" cellspacing="0" width="100%">
+<table id="examterms-table" class="display" cellspacing="0" width="100%">
   <thead>
     <tr>
       <th>Code</th>
@@ -29,11 +29,11 @@
       <td>{{$exam_term->end_date}}</td>
       <td>
         <div class="edit-delete-buttons">
-          {{ Form::model($exam_term, array('route' => ['examterm.edit', $exam_term->id], 'method' => 'get', 'class' => 'edit_exam_form')) }}
+          {{ Form::model($exam_term, array('route' => ['examterms.edit', $exam_term->id], 'method' => 'get', 'class' => 'edit_exam_form')) }}
             {{ Form::submit(trans('forms.edit'), array('class' => 'btn navbar-btn btn-warning')) }}
           {{ Form::close() }}
 
-          {{ Form::model($exam_term, array('route' => ['examterm.destroy', $exam_term], 'method' => 'delete', 'class' => 'delete_exam_form')) }}
+          {{ Form::model($exam_term, array('route' => ['examterms.destroy', $exam_term], 'method' => 'delete', 'class' => 'delete_exam_form')) }}
             {{ Form::submit(trans('forms.delete'), array('class' => 'btn navbar-btn btn-danger')) }}
           {{ Form::close() }}
       </div>

@@ -1,7 +1,7 @@
 <script type="text/javascript">
 $(window).load(function(){
   $('#loading-overlay').fadeOut().promise().done(function(){
-    $('#examterms-table').fadeIn();
+    $('#students-table').fadeIn();
   });
 });
 $(function () {
@@ -18,7 +18,7 @@ $(function () {
     //$('#examTermForm').formValidation('revalidateField', 'endDate');
   });
 
-  $('#examterms-table').DataTable({"columnDefs": [
+  $('#students-table').DataTable({"columnDefs": [
     {"className": "dt-center", "targets": "_all"}
   ], "pageLength": 25});
 

@@ -50,7 +50,7 @@ class ExamTermController extends Controller
     $exam_term->end_date = Carbon::createFromFormat('Y-m-d', $request->input('end_date'));
 
     if($exam_term->save()){
-      return redirect()->route('examterm.index');
+      return redirect()->route('examterms.index');
     }
   }
 
@@ -96,7 +96,7 @@ class ExamTermController extends Controller
     $exam_term->end_date = Carbon::createFromFormat('Y-m-d', $request->input('end_date'));
 
     if($exam_term->save()){
-      return redirect()->route('examterm.index');
+      return redirect()->route('examterms.index');
     }
   }
 
@@ -110,7 +110,7 @@ class ExamTermController extends Controller
   {
     $exam_term = ExamTerm::findOrFail($id);
     if($exam_term->delete()){
-      return redirect()->route('examterm.index');
+      return redirect()->route('examterms.index');
     }
   }
 }

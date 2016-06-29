@@ -6,7 +6,7 @@
 
 <h1 class="page-header custom-header">Create New Exam Term</h1>
 
-{{ Form::open(array('route' => 'examterms.store', 'autocomplete' => 'off')) }}
+{{ Form::open(array('route' => 'students.store', 'autocomplete' => 'off')) }}
   @include('models.examterms.includes.form')
 
 {{ Form::close() }}

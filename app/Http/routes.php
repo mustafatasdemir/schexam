@@ -44,6 +44,7 @@ Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()
 
   // Restful routes
 
-  Route::resource('examterm', 'ModelControllers\ExamTermController');
+  Route::resource('examterms', 'ModelControllers\ExamTermController');
+  Route::resource('students', 'ModelControllers\StudentController');
 
 });
